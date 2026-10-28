@@ -1,16 +1,16 @@
 # Hiking and Mountain Routes
 
-A relational SQLite database for cataloguing mountain hiking routes — and the peaks, massifs, mountain huts and species along them — while tracking users' hiking activity.
+A relational SQLite database for cataloguing mountain hiking routes while tracking users' hiking activity.
 
 Final project for [Harvard's CS50 Introduction to Databases with SQL](https://cs50.harvard.edu/sql/).
 
-**Video demo:** <!-- Paste your YouTube (unlisted) link here -->
+**Video demo:** [CS50 SQL Final Project, by Gerard Caminal](https://youtu.be/PzaR5GoQKQg)
 
 ---
 
 ## Overview
 
-The database organises information about hiking routes and their mountain environment, and lets users record the hikes they complete. It stores routes, their variants, peaks, mountain massifs, mountain huts, wildlife and plant species, and registered users — modelling the relationships between all of them with foreign keys and junction tables.
+The database organises information about hiking routes and their mountain environment, and lets users record the hikes they complete. It stores routes, their variants, peaks, mountain massifs, mountain huts, wildlife and plant species, and registered users, modelling the relationships between all of them with foreign keys and junction tables.
 
 It supports queries to explore routes, find the mountain huts along a route, discover the species documented on a route, list the peaks above a given altitude, and track each user's hiking history while respecting their privacy settings.
 
@@ -31,7 +31,7 @@ The design applies `CHECK`, `NOT NULL`, `UNIQUE` and `FOREIGN KEY` constraints t
 
 ![Entity Relationship Diagram](ER-Diagram.png)
 
-Seven main entities — `USERS`, `ROUTE`, `VARIANT`, `PEAK`, `MASSIF`, `MOUNTAIN_HUT` and `SPECIES` — plus five junction tables (`USER_ROUTE`, `ROUTE_PEAK`, `ROUTE_MASSIF`, `MOUNTAIN_HUT_ROUTE`, `ROUTE_SPECIES`) that model the many-to-many relationships between them. See [`DESIGN.md`](DESIGN.md) for the full write-up.
+Seven main entities  (`USERS`, `ROUTE`, `VARIANT`, `PEAK`, `MASSIF`, `MOUNTAIN_HUT` and `SPECIES`) plus five junction tables (`USER_ROUTE`, `ROUTE_PEAK`, `ROUTE_MASSIF`, `MOUNTAIN_HUT_ROUTE`, `ROUTE_SPECIES`) that model the many-to-many relationships between them. See [`DESIGN.md`](DESIGN.md) for the full write-up.
 
 ## How to run
 
@@ -58,4 +58,4 @@ sqlite> .read queries.sql
 
 **Gerard Caminal Altimir**
 Barcelona, Spain
-GitHub: [@Gcaminal](https://github.com/Gcaminal) · edX: GCA1
+GitHub: [@Gcaminal](https://github.com/Gcaminal)
